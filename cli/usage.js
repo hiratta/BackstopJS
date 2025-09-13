@@ -7,12 +7,14 @@ const commandsDescription = {
   reference: 'Creates new reference screenshots. Deletes all existing reference files.',
   init: 'Generate BackstopJS boilerplate files in your CWD. NOTE: Overwrites existing config files!',
   remote: 'Launch BackstopJS remote service.',
-  openReport: 'View the last test report in your browser.'
+  openReport: 'View the last test report in your browser.',
+  recompare: 'Compare existing bitmaps in a given bitmaps_test/<target> and build a report (no new capture).'
 };
 
 const optionsDescription = {
   '--config': 'Path to config file name',
   '--filter': 'A RegEx string used to filter by scenario labels when running "test", "reference", or "approve" commands',
+  '--target': 'When running "regenerate", directory name under paths.bitmaps_test to compare & report (e.g. 20250911-174613)',
   '-h, --help': 'Display usage',
   '-v, --version': 'Display version',
   '-i': 'Prevent deletion of non-matching reference files when running "reference" command (newer matching reference files are still overwritten)'
