@@ -45,7 +45,7 @@ async function buildCompareConfigFromConfig (config, target) {
 		outputFormat: configJSON.outputFormat,
 		id: config.id,
 		backstopConfigFileName: config.backstopConfigFileName,
-		defaultMisMatchThreshold: config.defaultMisMatchThreshold,
+		defaultMisMatchThreshold: configJSON.misMatchThreshold || config.defaultMisMatchThreshold,
 		defaultRequireSameDimensions: config.defaultRequireSameDimensions,
 		// also expose scenario defaults for parity
 		scenarioDefaults: configJSON.scenarioDefaults || {}
