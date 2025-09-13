@@ -104,7 +104,7 @@ module.exports = {
 		}
 
 		const targetDir = path.join(config.bitmaps_test, target);
-		return fs.pathExists(targetDir).then(async exists => {
+		return fs.exists(targetDir).then(async exists => {
 			if (!exists) {
 				throw new Error(`Target directory not found: ${targetDir}`);
 			}
